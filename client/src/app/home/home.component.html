@@ -1,0 +1,18 @@
+<div>
+  <h3>These pets are looking for a home!</h3>
+  <a [routerLink]="['/new']">Add a pet to the shelter</a>
+  <table class="maintable">
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>Type</td>
+        <td>Actions</td>
+      </tr>
+      <tr *ngFor='let pet of allPets'>
+        <td>{{ pet.name}}</td>
+        <td>{{ pet.type }}</td>
+        <td><button (click)="details(pet._id)" class="actionsbutton">Details</button><button (click)='edit(pet._id)' class="actionsbutton">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

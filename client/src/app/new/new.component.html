@@ -1,0 +1,31 @@
+<div>
+  <h3>Know of a pet needing a home?</h3>
+  <p style="color: red;" *ngIf="errors">{{ errors }}</p>
+  <form class="newform" (submit)='addPet()'>
+    <label>Pet Name:</label>
+    <br>
+    <input type="text" name="name" [(ngModel)]="newPet.name">
+    <br><br>
+    <label>Pet Type:</label>
+    <br>
+    <input type="text" name="type" [(ngModel)]="newPet.type">
+    <br><br>
+    <label>Description:</label>
+    <br>
+    <input type="text" name="description" [(ngModel)]="newPet.description">
+    <br><br>
+    <label>Skills:</label>
+    <br>
+    <label class="skill">Skill 1: </label>
+    <input type="text" name="skill1" [(ngModel)]="newPet.skills[0].skill">
+    <br>
+    <label class="skill">Skill 2:</label>
+    <input type="text" name="skill2" [(ngModel)]="newPet.skills[1].skill">
+    <br>
+    <label class="skill">Skill 3:</label>
+    <input type="text" name="skill3" [(ngModel)]="newPet.skills[2].skill">
+    <br>
+    <button class="formbutton" type="submit">Add pet</button>
+    <a [routerLink]="['/home']"><button class="formbutton">Cancel</button></a>
+  </form>
+</div>

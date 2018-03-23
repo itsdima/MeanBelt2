@@ -1,0 +1,31 @@
+<div>
+    <h3>Edit this pet</h3>
+    <p style="color: red;" *ngIf="errors">{{ errors }}</p>
+    <form class="newform" (submit)='Update()'>
+      <label>Pet Name:</label>
+      <br>
+      <input type="text" name="name" [(ngModel)]="updatePet[0].name">
+      <br><br>
+      <label>Pet Type:</label>
+      <br>
+      <input type="text" name="type" [(ngModel)]="updatePet[0].type">
+      <br><br>
+      <label>Description:</label>
+      <br>
+      <input type="text" name="description" [(ngModel)]="updatePet[0].description">
+      <br><br>
+      <label>Skills:</label>
+      <br>
+      <label class="skill">Skill 1: </label>
+      <input type="text" name="skill1" [(ngModel)]="updatePet[0].skills[0].skill">
+      <br>
+      <label class="skill">Skill 2:</label>
+      <input type="text" name="skill2" [(ngModel)]="updatePet[0].skills[1].skill">
+      <br>
+      <label class="skill">Skill 3:</label>
+      <input type="text" name="skill3" [(ngModel)]="updatePet[0].skills[2].skill">
+      <br>
+      <button class="formbutton" type="submit">Update pet</button>
+      <a [routerLink]="['/details/'+updatePet[0]._id]"><button class="formbutton">Cancel</button></a>
+    </form>
+  </div>

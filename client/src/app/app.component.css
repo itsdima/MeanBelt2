@@ -1,0 +1,49 @@
+.main-root{
+    padding: 15px; 
+}
+
+.maintable{
+    border: 2px solid black; 
+    border-collapse: collapse; 
+    margin-top: 10px; 
+}
+.maintable tr:nth-child(odd){
+    background-color: rgb(190, 190, 190); 
+}
+
+.maintable tr td{
+    border: 2px solid black; 
+    padding: 5px; 
+}
+
+.newform{
+    border: 2px solid silver;
+    width: 300px; 
+    padding: 10px; 
+}
+
+.formbutton{
+    padding: 10px; 
+    color: white; 
+    background-color: rgb(26, 218, 218);
+    margin-top: 10px; 
+    margin-left: 12px;
+    border: none;
+    border-radius: 5px; 
+}
+
+.actionsbutton{
+    padding: 8px; 
+    color: white; 
+    background-color: rgb(115, 130, 216);
+    margin-left: 10px; 
+    border: none; 
+    border-radius: 5px; 
+}
+.skill{
+    margin-left: 15px; 
+}
+
+.main-details{
+    width: 400px; 
+}
